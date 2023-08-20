@@ -6,61 +6,27 @@ body{
 nav{
     position: relative;
     overflow: hidden;
-    background-color: #1bc77c;
+    background-color: #1bc77c;    
 }
 
 nav a{
-    display: block;
+    text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
+    justify-content: center;
     color: white;
-    text-align: center;
     padding: 14px 40px;
 }
 
 
 nav a:hover{
-    background-color: #3ab881;
+    background-color: #62bd95;
 }
 
 nav a:active{
     background-color: #03e483;
 }
 
-.menu{
-    display: inline-block;
-    margin-left: 2%;
-    cursor: pointer;
-}
-
-.bar1, .bar2, .bar3{
-    height: 5px;
-    width: 35px;
-    margin: 6px 0px;
-    background-color: white;
-    transition: 0.4s;
-}
-
-.x .bar1{
-transform: translate(0px, 11px) rotate(-45deg);
-}
-
-.x .bar2{
-opacity: 0;
-}
-
-.x .bar3{
-    transform: translate(0px, -11px) rotate(45deg);
-}
-
-.itens{
-    background-color: rgb(79, 224, 142);
-    display: none;
-}
-
-.show.itens{
-    display: block;
-}
 
 footer{
     position: relative;
@@ -70,4 +36,70 @@ footer{
     vertical-align: middle;
     padding-top: 20px;
     font-size: 1em;
+}
+
+@media only screen and (min-width: 900px){
+
+    nav{
+        text-align: center;
+    }
+
+    nav a{
+        display: inline-block;
+    }
+
+    .menu{
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 900px){
+
+    nav{
+        display: block;
+    }
+
+    nav a{
+        text-align: center;
+        display: block;
+    }
+
+
+    .menu{
+        display: inline-block;
+        margin-left: 2%;
+        cursor: pointer;
+        padding: 10px 0px;
+    }
+    
+    .bar1, .bar2, .bar3{
+        height: 5px;
+        width: 42px;
+        margin: 6px 0px;
+        background-color: white;
+        transition: 0.4s;
+    }
+    
+    .x .bar1{
+    transform: translate(0px, 11px) rotate(-45deg);
+    }
+    
+    .x .bar2{
+    opacity: 0;
+    }
+    
+    .x .bar3{
+        transform: translate(0px, -11px) rotate(45deg);
+    }
+    
+    .itens{
+        background-color: rgb(79, 224, 142);
+        display: none;
+    }
+    
+    .show.itens{
+        display: block;
+    }
 }
